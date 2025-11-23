@@ -10,3 +10,5 @@ ginny,90675
 greyi,1234
 daisy,1234568
 jake,9067845231267
+dianna,dianna1234556
+pinky,12345678910
