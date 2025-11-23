@@ -13,9 +13,17 @@ export const writeUserCredentials = (userName, password) => {
   console.log(`User named ${userName} created`);
 };
 
+const isValidPassword = (password) => password.length >= 10;
+
 export const signUp = () => {
-console.log("\nSignUp\n");
+  console.log("\nSignUp\nNote: password should contain atleast 10 Chars\n");
 
   const { userName, password } = getCredentials();
-  writeUserCredentials(userName, password);
+
+  if (isValidPassword(password)) {
+    writeUserCredentials(userName, password);
+    return;
+  }
+  console.log("\nIncorrect password");
+  signUp();
 };
