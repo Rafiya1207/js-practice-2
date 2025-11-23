@@ -1,1 +1,3 @@
 - take userName, password --> write to a file
+- parse background data
+- take userName, password --> if matched display you're in --> else ask to try again

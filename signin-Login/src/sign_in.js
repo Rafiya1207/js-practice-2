@@ -1,9 +1,6 @@
-export const writeUserCredentials = (userName, password) => {
-  const prevData = Deno.readTextFileSync("./db/data.txt");
+import { data } from "./data.js";
 
-  Deno.writeTextFileSync("./db/data.txt", prevData.concat('\n') + [
-    userName,
-    password,
-  ]);
-  console.log(`User named ${userName} created`);
-};
+export const isUser = (userName, userPassword) =>
+  data.some(({ userName: name, password }) =>
+    name === userName && userPassword === password
+  );
