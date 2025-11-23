@@ -14,6 +14,8 @@ export const writeUserCredentials = (userName, password) => {
 };
 
 export const signUp = () => {
+console.log("\nSignUp\n");
+
   const { userName, password } = getCredentials();
   writeUserCredentials(userName, password);
 };
