@@ -11,7 +11,7 @@ export const TASKS = {
 export const runParalelly = (tasks) =>
   Promise.all(tasks.map((task) => TASKS[task]()));
 
-export const runSerially = (...task) => TASKS[task]();
+export const runSerially = async(...task) => [await TASKS[task]()];
 
 export const MODES = {
   parallel: runParalelly,
@@ -24,7 +24,6 @@ const createLog = (desc, time, resolve) => {
   setTimeout(() => {
     const end = Date.now();
 
-    logs.push({ desc, start, end, duration: end - start });
     resolve({ desc, start, end, duration: end - start });
   }, time);
 };
@@ -46,7 +45,8 @@ const runTasks = async (tasks) => {
     if (task.length > 1) {
       mode = "parallel";
     }
-    await MODES[mode](task);
+    const completedTask = await MODES[mode](task);
+    logs.push({ mode, tasks : completedTask });
   }
 };
 
