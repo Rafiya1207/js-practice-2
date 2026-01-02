@@ -8,15 +8,7 @@ export const TASKS = {
   task5: () => task("task5", 10),
 };
 
-export const runParalelly = (tasks) =>
-  Promise.all(tasks.map((task) => TASKS[task]()));
-
-export const runSerially = async(...task) => [await TASKS[task]()];
-
-export const MODES = {
-  parallel: runParalelly,
-  serial: runSerially,
-};
+export const run = (tasks) => Promise.all(tasks.map((task) => TASKS[task]()));
 
 const createLog = (desc, time, resolve) => {
   const start = Date.now();
@@ -32,12 +24,6 @@ const task = (desc, time) => {
   return new Promise((resolve) => createLog(desc, time, resolve));
 };
 
-export const runTasksSerially = async (tasks) => {
-  for (const task of tasks) {
-    await TASKS[task]();
-  }
-};
-
 const runTasks = async (tasks) => {
   for (const task of tasks) {
     let mode = "serial";
@@ -45,15 +31,17 @@ const runTasks = async (tasks) => {
     if (task.length > 1) {
       mode = "parallel";
     }
-    const completedTask = await MODES[mode](task);
-    logs.push({ mode, tasks : completedTask });
+    const completedTask = await run(task);
+    console.log({ mode, tasks: completedTask });
+    logs.push({ mode, tasks: completedTask });
   }
 };
 
 const main = async () => {
-  const tasksToRun = [["task1"], ["task5"], ["task2"], ["task3", "task4"]];
+  const tasksToRun = [["task1"], ["task5"], ["task2"], ["task3", "task4"], [
+    "task5",
+  ]];
   await runTasks(tasksToRun);
-  console.log(logs);
 };
 
 main();
