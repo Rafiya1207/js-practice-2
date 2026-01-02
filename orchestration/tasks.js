@@ -2,7 +2,7 @@ export const logs = [];
 
 export const TASKS = {
   task1: () => task("task1", 1000),
-  task2: () => task("task2", 400),
+  task2: () => task("task2", 4000),
   task3: () => task("task3", 200),
 };
 
@@ -21,16 +21,19 @@ const task = (desc, time) => {
   return new Promise((resolve) => createLog(desc, time, resolve));
 };
 
-const runTasks = async (tasks) => {
+export const runSequentially = async (tasks) => {
   for (const task of tasks) {
     await TASKS[task]();
   }
 };
 
+export const runParalelly = (tasks) =>
+  Promise.all(tasks.map((task) => TASKS[task]()));
+
 const main = async () => {
   const tasksToRun = ["task1", "task3", "task2"];
-  await runTasks(tasksToRun);
+  await runParalelly(tasksToRun);
   console.log(logs);
 };
 
-main();
+// main();
