@@ -1,0 +1,16 @@
+{
+  "scriptId": "336",
+  "url": "file:///Users/shaikrafiya/workspace/js/assignments/js-inventory-Rafiya1207/src/table_exists.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 203, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "tableExists",
+      "ranges": [{ "startOffset": 27, "endOffset": 201, "count": 25 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

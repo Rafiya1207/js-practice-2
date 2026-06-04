@@ -31,7 +31,8 @@ const validateUser = (userInput) => {
 const validatePassword = (userInput) => {
   if (!isValidPassword(userInput)) {
     console.log(
-      "Incorrect password. Try Again\n\nNote: password should contain atleast 10 Chars",
+      `\nPassword Doesn't Match criteria. Try Again
+Note: password should contain atleast 10 Chars\n`,
     );
 
     const userPassword = prompt("Enter Password: ");
@@ -41,10 +42,12 @@ const validatePassword = (userInput) => {
 };
 
 export const signUp = () => {
-  console.log("\nSignUp\nNote: password should contain atleast 10 Chars\n");
+  console.log("\nSignUp\nNote: User name should not contain special characters\n");
 
   const userName = prompt("Enter User Name: ");
   const validUserName = validateUser(userName);
+
+  console.log("Note: password should contain atleast 10 Chars");
 
   const userPassword = prompt("Enter Password: ");
   const validPassword = validatePassword(userPassword);

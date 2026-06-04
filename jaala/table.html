@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Styled Tables Showcase</title>
+
+  <link rel="stylesheet" href="table.css">
+</head>
+
+<body>
+  <h1>HTML Table Styling Showcase</h1>
+
+  <section>
+    <h2>1. Basic Clean Table</h2>
+    <table class="table basic">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alice</td>
+          <td>alice@email.com</td>
+          <td>Active</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>bob@email.com</td>
+          <td>Inactive</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>2. Zebra Striped + Hover</h2>
+    <table class="table zebra">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Laptop</td>
+          <td>$1200</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>$800</td>
+          <td>34</td>
+        </tr>
+        <tr>
+          <td>Tablet</td>
+          <td>$600</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Mouse</td>
+          <td>$100</td>
+          <td>10</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>3. Fully Bordered Grid</h2>
+    <table class="table bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Department</th>
+          <th>Manager</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>Engineering</td>
+          <td>Jane</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Marketing</td>
+          <td>Tom</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <section>
+    <h2>4. Minimal Modern</h2>
+    <table class="table minimal">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Owner</th>
+          <th>Due Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Design UI</td>
+          <td>Anna</td>
+          <td>Feb 15</td>
+        </tr>
+        <tr>
+          <td>Deploy App</td>
+          <td>Mark</td>
+          <td>Feb 20</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>5. Dark Theme</h2>
+    <table class="table dark">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Role</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Admin</td>
+          <td>Owner</td>
+          <td>Online</td>
+        </tr>
+        <tr>
+          <td>Guest</td>
+          <td>Viewer</td>
+          <td>Offline</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>6. Sticky Header (Scrollable)</h2>
+    <div class="sticky-wrapper">
+      <table class="table sticky">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Student 1</td>
+            <td>85</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>Student 2</td>
+            <td>92</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>Student 3</td>
+            <td>76</td>
+            <td>C</td>
+          </tr>
+          <tr>
+            <td>Student 4</td>
+            <td>88</td>
+            <td>B+</td>
+          </tr>
+          <tr>
+            <td>Student 5</td>
+            <td>95</td>
+            <td>A+</td>
+          </tr>
+          <tr>
+            <td>Student 6</td>
+            <td>67</td>
+            <td>D</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>7. Fixed Layout Columns</h2>
+    <table class="table fixed basic">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>High performance laptop with 16GB RAM</td>
+          <td>Electronics</td>
+          <td>$1500</td>
+        </tr>
+        <tr>
+          <td>Office chair ergonomic design</td>
+          <td>Furniture</td>
+          <td>$300</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>8. Responsive Wide Table</h2>
+    <div class="responsive">
+      <table class="table bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Department</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1001</td>
+            <td>Sarah</td>
+            <td>sarah@email.com</td>
+            <td>555-1234</td>
+            <td>HR</td>
+            <td>New York</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>9. Table with Status Badges</h2>
+    <table class="table zebra">
+      <thead>
+        <tr>
+          <th>Order</th>
+          <th>Customer</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#1001</td>
+          <td>Alice</td>
+          <td><span class="badge success">Completed</span></td>
+        </tr>
+        <tr>
+          <td>#1002</td>
+          <td>Bob</td>
+          <td><span class="badge warning">Pending</span></td>
+        </tr>
+        <tr>
+          <td>#1003</td>
+          <td>Charlie</td>
+          <td><span class="badge danger">Cancelled</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>10. Compact Table</h2>
+    <table class="table bordered compact">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Alex</td>
+          <td>88</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Sam</td>
+          <td>91</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+order_id,customer_id,order_date,status
+1,1,2025-01-10,placed
+2,2,2025-01-15,shipped
+3,2,2025-02-05,cancelled
+4,4,2025-03-25,placed
+5,5,2024-07-03,shipped
+6,6,2025-06-12,placed
+7,8,2025-02-20,shipped
+8,9,2024-09-10,placed
+9,1,2025-04-18,shipped
+10,3,2023-12-01,cancelled

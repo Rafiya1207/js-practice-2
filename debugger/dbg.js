@@ -4,14 +4,17 @@ export class Debugger {
    * dbg function
    */
 
-  logs = [];
+  #logs;
 
   constructor() {
+    this.#logs = [];
+    this.dbg = (x) => this.dbg.apply(this, [x]);
+    console.log(this.dbg(9));
+    
   }
 
   dbg(x) {
     console.log(x);
-    prompt();
     return x;
   }
 }

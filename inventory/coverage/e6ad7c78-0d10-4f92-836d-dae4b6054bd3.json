@@ -1,0 +1,52 @@
+{
+  "scriptId": "334",
+  "url": "file:///Users/shaikrafiya/workspace/js/assignments/js-inventory-Rafiya1207/src/query_inventory.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 1405, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "parseAddArgs",
+      "ranges": [{ "startOffset": 90, "endOffset": 256, "count": 17 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "parseUpdateArgs",
+      "ranges": [{ "startOffset": 290, "endOffset": 431, "count": 8 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "parse",
+      "ranges": [{ "startOffset": 455, "endOffset": 663, "count": 43 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "list",
+      "ranges": [{ "startOffset": 571, "endOffset": 579, "count": 4 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "init",
+      "ranges": [{ "startOffset": 593, "endOffset": 601, "count": 13 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "validateQueryInventoryArgs",
+      "ranges": [{ "startOffset": 701, "endOffset": 924, "count": 36 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "queryInventory",
+      "ranges": [
+        { "startOffset": 957, "endOffset": 1403, "count": 36 },
+        { "startOffset": 1126, "endOffset": 1181, "count": 12 },
+        { "startOffset": 1186, "endOffset": 1249, "count": 3 },
+        { "startOffset": 1254, "endOffset": 1316, "count": 10 },
+        { "startOffset": 1321, "endOffset": 1397, "count": 3 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

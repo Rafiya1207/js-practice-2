@@ -1,0 +1,82 @@
+{
+  "scriptId": "335",
+  "url": "file:///Users/shaikrafiya/workspace/js/assignments/js-inventory-Rafiya1207/src/sqlite/sqlite_inventory.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 2951, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "createInventory",
+      "ranges": [{ "startOffset": 188, "endOffset": 222, "count": 28 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "initInventory",
+      "ranges": [{ "startOffset": 254, "endOffset": 604, "count": 21 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "listInventory",
+      "ranges": [
+        { "startOffset": 636, "endOffset": 1094, "count": 4 },
+        { "startOffset": 759, "endOffset": 822, "count": 1 },
+        { "startOffset": 822, "endOffset": 1093, "count": 2 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 921, "endOffset": 1086, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "getItemId",
+      "ranges": [
+        { "startOffset": 1122, "endOffset": 1507, "count": 9 },
+        { "startOffset": 1253, "endOffset": 1312, "count": 1 },
+        { "startOffset": 1312, "endOffset": 1429, "count": 7 },
+        { "startOffset": 1429, "endOffset": 1457, "count": 6 },
+        { "startOffset": 1457, "endOffset": 1506, "count": 1 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "addItem",
+      "ranges": [
+        { "startOffset": 1533, "endOffset": 1987, "count": 12 },
+        { "startOffset": 1663, "endOffset": 1718, "count": 2 },
+        { "startOffset": 1718, "endOffset": 1760, "count": 9 },
+        { "startOffset": 1760, "endOffset": 1817, "count": 1 },
+        { "startOffset": 1817, "endOffset": 1986, "count": 8 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "getItemById",
+      "ranges": [{ "startOffset": 2017, "endOffset": 2116, "count": 2 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "validateUpdateArgs",
+      "ranges": [
+        { "startOffset": 2146, "endOffset": 2392, "count": 7 },
+        { "startOffset": 2192, "endOffset": 2204, "count": 5 },
+        { "startOffset": 2206, "endOffset": 2264, "count": 4 },
+        { "startOffset": 2264, "endOffset": 2391, "count": 3 }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "updateItemQuantity",
+      "ranges": [
+        { "startOffset": 2429, "endOffset": 2949, "count": 8 },
+        { "startOffset": 2592, "endOffset": 2660, "count": 1 },
+        { "startOffset": 2660, "endOffset": 2882, "count": 2 },
+        { "startOffset": 2882, "endOffset": 2948, "count": 1 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+function fahrenheitToCelsius(value) {
+  return (value - 32) * (5 / 9);
+}
+
+function kelvinToCelsius(value) {
+  return (value - 273.15);
+}
+
+function celsiusToFarenheit(value) {
+  return (value * (9 / 5)) + 32;
+}
+
+function celsiusToKelvin(value) {
+  return (value + 273.15);
+}
+
+function fahrenheitToKelvin(value) {
+  return celsiusToKelvin(fahrenheitToCelsius(value));
+}
+
+function kelvinToFahrenheit(value) {
+  return celsiusToFarenheit(kelvinToCelsius(value));
+}
+
+function isApproximate(expectedResult, receivedResult) {
+  return ((expectedResult - 0.05) < receivedResult) &&
+    (receivedResult < (expectedResult + 0.05));
+}
+
+function isValidUnit(unit) {
+  return unit === "K" || unit === "C" || unit === "F";
+}
+
+function convert(from, to, value) {
+  // Implementation here.
+  if (from === to) {
+    return value;
+  }
+  const conversion = from + " " + to;
+
+  switch (conversion) {
+    case "F C":
+      return fahrenheitToCelsius(value);
+    case "K C":
+      return kelvinToCelsius(value);
+    case "C F":
+      return celsiusToFarenheit(value);
+    case "C K":
+      return celsiusToKelvin(value);
+    case "F K":
+      return fahrenheitToKelvin(value);
+    case "K F":
+      return kelvinToFahrenheit(value);
+  }
+
+  return NaN;
+}
+
+function resultCharacter(expectedResult, receivedResult) {
+  if (expectedResult !== NaN && receivedResult !== NaN) {
+    return "✅";
+  }
+  return isApproximate(expectedResult, receivedResult) ? "✅" : "❌";
+}
+
+function composeMessage(from, to, value, expectedResult, receivedResult) {
+  const resultCharacterMessage = resultCharacter(
+    expectedResult,
+    receivedResult,
+  );
+  const inputsMessage = " | " + value + " " + from + " -> " + to;
+  const resultMessage = " | expected: " + expectedResult + " | received: " +
+    receivedResult;
+  const message = resultCharacterMessage + inputsMessage + resultMessage + "\n";
+  return message;
+}
+
+function testConvert(from, to, value, expectedResult) {
+  const receivedResult = convert(from, to, value);
+  console.log(composeMessage(from, to, value, expectedResult, receivedResult));
+}
+
+function testAll() {
+  testConvert("F", "C", -40, -40);
+  testConvert("K", "C", 100, -173.15);
+  testConvert("C", "F", 37, 98.6);
+  testConvert("C", "K", 0, 273.15);
+  testConvert("C", "K", "0", 273.15);
+  testConvert("F", "K", 98.6, 310.15);
+  testConvert("K", "F", 100, -279.67);
+  testConvert("K", "K", 100, 100);
+  testConvert("K", "F", "100", -279.67);
+  testConvert("C", "C", "0", 0);
+  testConvert("K", "J", 100, NaN);
+  testConvert("K", "F", "abc", NaN);
+  testConvert("X", "C", 0, NaN);
+  testConvert("X", "X", 10, NaN);
+}
+
+testAll();

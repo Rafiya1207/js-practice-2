@@ -1,0 +1,26 @@
+//1. How many films has Shah Rukh Khan acted in?
+grep -o "Actor" finalSrk.csv
+
+//2. The year where SRK acted in the most number of movies and the number of movies he acted in that year.
+grep "Actor" finalSrk.csv | cut -d',' -f2 | uniq -c | sort -rn | head -n1
+
+//3. List in alphabetical order all the directors that SRK has acted with.
+grep 'Actor' finalSrk.csv | grep -o '[^,!]*$' | sort -u
+
+//4. List all directors that SRK has worked for more than once
+grep -o '[^,!]*$' finalSrk.csv | sort | uniq -d
+
+//5. Which is the most popular letter that SRK films begin with? Provide a command that gives both the count and the letter?
+tail -n +2 finalSrk.csv | cut -c1 | sort | uniq -c | sort -r | head -n1
+
+//6. List all the Shah Rukh Khan movies in the order of the year in which they were released. If a year has more than one movie, then it should be listed in reverse alphabetical order?
+
+//7. Which director has SRK worked the most with?
+grep 'Actor' finalSrk.csv | grep -o '[^,!]*$' | sort | uniq -c | sort -r | head -n1
+
+//8. What is the most frequently occurring first word amongst all the movie titles in which SRK has acted
+grep 'Actor' finalSrk.csv | grep '^\w\+' | sort | uniq -c | sort -r | head -n +2
+grep 'Actor' finalSrk.csv | cut -d',' -f1 | cut -d' ' -f1 | sort | uniq -c | sort -r | head -n +2
+
+//9. Most frequently occurring word in SRK titles. Amongst ALL the words
+cut -d',' -f1 finalSrk.csv | tr ' ' '\n' | sort| uniq -c | sort -r | head -n +1

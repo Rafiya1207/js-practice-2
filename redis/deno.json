@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@db/redis": "jsr:@db/redis@^0.40.0"
+  }
+}

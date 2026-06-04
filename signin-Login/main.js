@@ -10,14 +10,14 @@ export const getCredentials = () => {
 };
 
 const main = () => {
-  const isNotMember = confirm("Not a member ? (Sign Up)");
-  
+  const isMember = confirm("Are you already a member?");
+
   parseData();
 
-  if (isNotMember) {
-    return signUp();
+  if (isMember) {
+    return signIn();
   }
-  return signIn();
+  return signUp();
 };
 
 main();

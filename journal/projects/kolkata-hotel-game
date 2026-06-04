@@ -1,0 +1,50 @@
+# Kolkata Hotel Allocation
+
+## 1. System Parameters
+* Population: There are n hotels and n users.
+* Service Constraint: A hotel can serve only one user per round.
+
+## 2. Process Flow
+
+### Phase 1: Initial Selection (Round 1)
+1. User Choice: All users simultaneously choose a hotel.
+2. Conflict Resolution: 
+    * If a hotel is selected by only one user, that user is served.
+    * If more than one user chooses the same hotel, the hotel randomly chooses one user to serve.
+    * Any remaining users are left unserved for the round.
+
+### Phase 2: Information Exposure
+* Hotel Factor Definition: The hotel factor is a metric representing the proportion of the total user population that attempted to book a specific hotel during a round.
+* Visibility: This factor is exposed to all users after specific rounds to inform future decision-making.
+
+### Phase 3: Strategic Adjustment (Round 2)
+* User Shifting: Based on the calculated hotel factor, users may shift their selection to other hotels, typically targeting those with lower competition to increase their chances of being served.
+
+---
+
+## 3. Practical Example
+In this scenario, we assume 5 Hotels (A, B, C, D, E) and 5 Users (U, V, W, X, Y).
+
+### Round 1 Selection
+| User | Chosen Hotel |
+| :--- | :--- |
+| U | Hotel A |
+| V | Hotel A |
+| W | Hotel C |
+| X | Hotel D |
+| Y | Hotel B |
+
+### Resulting Hotel Factors
+
+| Hotel | Selection Count | Hotel Factor (%) |
+| :--- | :--- | :--- |
+| A | 2 (U, V) | 40% |
+| B | 1 (Y) | 20% |
+| C | 1 (W) | 20% |
+| D | 1 (X) | 20% |
+| E | 0 | 0% |
+
+### Analysis
+* Conflict: Hotel A must choose between User U and User V. One will be served, and the other will be rejected.
+* Underutilization: Hotel E is completely vacant (0% factor).
+* Round 2 Strategy: In the next round, users at Hotel A are likely to shift toward Hotel E to avoid the 40% competition density.

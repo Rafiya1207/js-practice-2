@@ -1,0 +1,44 @@
+* {
+  padding: 0px;
+  color: #333;
+}
+
+body {
+  background-color: whitesmoke;
+  margin: 0px 300px;
+}
+
+.article {
+  background-color: #fff;
+  padding: 2em 3em;
+}
+
+.text {
+  line-height: 1.5em;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.heading-section {
+  border-bottom: 1px solid #ccc;
+}
+
+.section-2 {
+  border: 2px solid #ccc;
+  padding: 1em 2em;
+}
+
+.side-heading {
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.section-4 {
+  border-top: 5px solid #666;
+  border-bottom: 5px solid #666
+}
+
+.section-heading {
+  margin: 28px 0px;
+}

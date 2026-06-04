@@ -1,0 +1,11 @@
+"customer_id","first_name","last_name","email","city","created_at","customer_tier"
+7,"Rahul","Das","rahul.das@yahoo.com","Kolkata","2022-12-28 10:10:10",NULL
+10,"Ananya","Joshi","ananya.joshi@gmail.com","Nagpur","2025-08-01 07:25:55",NULL
+1,"Arjun","Mehta","arjun.mehta@gmail.com","Mumbai","2024-02-10 09:15:23","Bronze"
+2,"Riya","Sharma","riya.sharma@yahoo.com","Delhi","2025-01-05 14:42:10","Bronze"
+3,"Karthik","Rao","karthik.rao@outlook.com","Bengaluru","2023-11-18 19:05:44","Silver"
+4,"Neha","Verma","neha.verma@gmail.com","Pune","2025-03-22 08:30:00","Silver"
+5,"Aditya","Kapoor","aditya.kapoor@company.com","Gurgaon","2024-07-01 11:55:12","Gold"
+6,"Pooja","Nair","pooja.nair@gmail.com","Kochi","2025-06-09 16:20:45","Bronze"
+8,"Sneha","Iyer","sneha.iyer@outlook.com","Chennai","2025-02-14 21:45:30","Bronze"
+9,"Vikram","Singh","vikram.singh@gmail.com","Jaipur","2024-09-03 13:00:00","Bronze"

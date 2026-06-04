@@ -1,0 +1,67 @@
+banana, 25
+grapes, 1
+chiko, 9
+apple, 131
+banana, 15
+grapes, 2
+chiko, 9
+apple, 31
+grapes, 1
+
+
+
+
+apple, 131
+apple, 31
+banana, 25
+banana, 15
+chiko, 9
+chiko, 9
+grapes, 1
+grapes, 1
+grapes, 2
+
+
+apple, 131
+apple, 31
+banana, 15
+banana, 25
+chiko, 9
+chiko, 9
+grapes, 1
+grapes, 1
+grapes, 2
+
+
+
+apple, 31
+banana, 15
+banana, 25
+chiko, 9
+chiko, 8
+grapes, 1
+grapes, 12
+grapes, 28
+apple, 131
+
+
+
+apple, 31
+apple, 131
+banana, 25
+banana, 15
+chiko, 9
+chiko, 9
+grapes, 1
+grapes, 2
+grapes, 1
+
+grapes, 1
+grapes, 1
+grapes, 2
+chiko, 9
+chiko, 9
+banana, 15
+banana, 25
+apple, 31
+apple, 131
